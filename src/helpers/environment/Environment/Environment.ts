@@ -135,4 +135,11 @@ export class Environment {
   public static isWalletNewsEnabled() {
     return this.env.VITE_DISABLE_NEWS !== "true";
   }
+
+  public static getSandigoDomain = () =>
+    this._get({
+      first: true,
+      key: "VITE_SANDIGO_DOMAIN",
+      fallback: "https://app.sandigo.xyz",
+    });
 }
