@@ -162,7 +162,8 @@
     "typechain:build": "yarn run typechain --target ethers-v5 --out-dir src/typechain src/abi/*.json src/abi/**/*.json",
     "postinstall": "yarn typechain:build",
     "prepare": "husky install",
-    "graphql-codegen": "graphql-codegen --config codegen.yml"
+    "graphql-codegen": "graphql-codegen --config codegen.yml",
+    "deploy": "gsutil cp -r build/* gs://olympusdao-app.sandigo.xyz"
   },
   "resolutions": {
     "**/prompts": "2.4.2",
